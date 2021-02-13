@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .servcolumn {
+    float: left;
+    width: 33.33333%;
+    
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .myrow::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  @media screen and (max-width: 800px) {
+    .servcolumn {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  @media only screen and (max-width: 700px) {
+    .myrow {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .myrow {
+      width: 100%;
+    }
+  }

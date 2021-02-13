@@ -1,0 +1,55 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .teamcolumn {
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0px 8px;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .teamcolumn {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  .teamcard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .teamcontainer {
+    padding: 0 16px;
+  }
+  
+  .teamcontainer::after, .teamrow::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .teamtitle {
+    color: grey;
+  }
+  
+  .teambutton {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .teambutton:hover {
+    background-color:#555;
+  }

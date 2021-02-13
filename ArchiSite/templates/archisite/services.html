@@ -1,0 +1,157 @@
+{% extends 'ArchiSite/base.html' %}
+{% block content %} 
+{% load static %}
+    
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('/static/images/slideshow/back1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">Our Services</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Our Services <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   	
+    <section class="ftco-section bg-light" style="box-shadow: 5px 10px 18px #888888;">
+      
+      <!-- The App Section -->
+      <div class="thiscontainer ftco-animate" style="margin-top: -80px;">
+        <div class="thisrow">
+          <div class="thiscolumn-66">
+            <h1 class="xlarge-font ftco-animate"><b>Architecture and Interior Design</b></h1>
+            <p class="ftco-animate" style="color: #292323">  
+                The definition of architecture calls it ‘the design of buildings and spaces’. MAD practices an architecture that extends
+                well beyond that definition to something much more complex. We strive to create buildings and spaces that meet our
+                client’s needs, develop a sense of community, and transform our environment. We offer clients a full range of
+                architectural design services, from concept through construction...</p>
+            <button class="thisbutton ftco-animate" onclick="location.href = '{% url 'architecture' %}';">Learn More</button>
+          </div>
+          <div class="thiscolumn-33">
+              <img src="/static/images/architectureandinteriordesignservicepage/arch2.jpg" class="thisimg" width="800" class="ftco-animate" height="700">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Clarity Section -->
+      <div class="thiscontainer ftco-animate" style="background-color:#f1f1f1">
+        <div class="thisrow">
+          <div class="thiscolumn-33">
+            <img src="/static/images/predes.jpg" alt="App" class="ftco-animate thisimg" width="800" height="700">
+          </div>
+          <div class="thiscolumn-66">
+            <h1 class="xlarge-font ftco-animate"><b>Pre-Design and Planning</b></h1>
+            <p class="ftco-animate" style="color: #292323">  
+                MAD has assisted sophisticated clients who know what they want and how to get there. Likewise, MAD also assists those
+                clients for whom this might be their first and only building or fit-up project, and services provided are matched to each
+                client’s unique requirements.
+                MAD believes the pre-design effort is critical to a project’s success. Without it, the risk is a false start...</p>
+            <button class="thisbutton ftco-animate" onclick="location.href = '{% url 'predesign' %}';">Learn More</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- The App Section -->
+      <div class="thiscontainer ftco-animate">
+        <div class="thisrow">
+          <div class="thiscolumn-66">
+            <h1 class="xlarge-font ftco-animate"><b>Sustainable Design</b></h1>
+            <p class="ftco-animate" style="color: #292323"> 
+                In MAD we truly embrace sustainable design, MAD advocates that good design, construction and
+                sustainability go hand-in-hand. We pride ourselves on our sustainable architecture services for clients who see the huge
+                value in investing in renewable energy, reduced water consumption and minimized environmental impact.
+                Considering these issues during the...</p>
+            <button class="thisbutton ftco-animate" onclick="location.href = '{% url 'susdesign' %}';">Learn More</button>
+          </div>
+          <div class="thiscolumn-33">
+              <img src="/static/images/susdesign.jpg" width="800" class="ftco-animate thisimg" height="700">
+          </div>
+        </div>
+      </div>
+
+      <!-- The App Section -->
+      <div class="thiscontainer ftco-animate" style="background-color:#f1f1f1">
+        <div class="thisrow">
+          <div class="thiscolumn-33">
+            <img src="/static/images/landscape/land2.jpg" class="ftco-animate thisimg" alt="App" width="800" height="700">
+          </div>
+          <div class="thiscolumn-66">
+            <h1 class="xlarge-font ftco-animate"><b>Landscape Design</b></h1>
+            <p class="ftco-animate" style="color: #292323">  
+                We provide a complete range of landscape architectural services, from the earliest stage of design to landscape
+                maintenance supervision.
+                We are adept at creating attractive landscape designs at a variety of scales from large campus grounds to smaller garden
+                spaces that can be enjoyed by a ...</p>
+            <button class="thisbutton ftco-animate" onclick="location.href = '{% url 'landscape' %}';">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br>
+    <br>
+    <section class="ftco-consultation bg-light" style="box-shadow: 5px 10px 18px #888888;">
+      <div class="container-fluid">
+        <br>
+        <br>
+      <div class="row d-md-flex">
+        <div class="half d-flex justify-content-center align-items-center img" style="background-image: url(/static/images/slideshow/back2.jpg);">
+          <div class="overlay"></div>
+          <div class="desc text-center">
+            <div>
+              <span>
+                <img src="/static/images/newlogos/ARCHITREVO LOGO WEBSITE white-01.png" style="height:170px;width:320px;"></img>
+              </span>
+            </div>
+          </div>
+          </div>
+          <div class="half p-3 p-md-5 ftco-animate">
+            <h3 class="mb-4">Ask us a question!</h3>
+            <form action="#" style="font-family:poppins">
+            <div class="form-group">
+            <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+            <input type="text" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+            <input type="text" class="form-control" placeholder="Subject">
+            </div>
+            <div class="form-group">
+            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Send message" class="btn btn-primary" style="color:black">
+            </div>
+                </form>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section class="ftco-section-parallax bg-secondary">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+              <h2 style="font-family: poppins;">Subcribe to our Newsletter</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+              <div class="row d-flex justify-content-center mt-4 mb-4">
+                <div class="col-md-8">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <input type="submit" value="Subscribe" class="submit px-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+    {% endblock %}  

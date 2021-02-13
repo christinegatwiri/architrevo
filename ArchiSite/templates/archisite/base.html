@@ -1,0 +1,199 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Architrevo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/style2.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'css/hover.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fade.css' %}">
+    <link rel="stylesheet" href="{% static 'css/myside.css' %}">
+    <link rel="stylesheet" href="{% static 'css/side.css' %}">
+    <link rel="stylesheet" href="{% static 'css/polaroid.css' %}">
+    <link rel="stylesheet" href="{% static 'css/imagegrid.css' %}">
+    <link rel="stylesheet" href="{% static 'css/image2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/zigzag.css' %}">
+
+	<style>
+		.sticky
+		{
+			position: fixed;
+			top: 0;
+  			width: 100%;
+		}
+
+    .servicediv
+    {
+      color: white;
+    }
+
+    .servicediv:hover
+    {
+      color: whitesmoke;
+    }
+
+    .myimage
+    {
+      object-fit: cover;
+      filter: blur(1.5px);
+      /* height:450px; */
+    }
+
+    .servicediv.servicestxt
+    {
+      color:rgb(10, 10, 10);
+      font-size:23px;position: absolute;
+			top: 50%;
+			left: 35%;
+			margin-right: -50%; 
+      font-family:Poppins;
+    }
+
+    
+	</style>
+	
+  </head>
+
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+          <div class="container">
+            <img src="/static/images/architrevowebsitefiles/newlogo.png" style="height:120px;width:230px;display:flex;"></img> &nbsp;&nbsp;&nbsp;
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+          </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav" style="font-family: Poppins;">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item {% if nbar == 'home' %}active{% endif %}"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+				<li class="nav-item {% if nbar == 'about' %}active{% endif %}"><a href="{% url 'about' %}" class="nav-link">About Us</a></li>
+				<li class="nav-item {% if nbar == 'services' %}active{% endif %}"><a href="{% url 'services' %}" class="nav-link">Our Services</a></li>
+				<li class="nav-item {% if nbar == 'porfolio' %}active{% endif %}"><a href="{% url 'portfolio' %}" class="nav-link">Our Portfolio</a></li>
+				<li class="nav-item {% if nbar == 'plans' %}active{% endif %}"><a href="{% url 'house_plans' %}" class="nav-link">House Plans</a></li>
+				<li class="nav-item {% if nbar == 'blog' %}active{% endif %}"><a href="{% url 'blog' %}" class="nav-link">News and Insights</a></li>
+				<li class="nav-item {% if nbar == 'contact' %}active{% endif %}"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+			  </ul>
+	      </div>
+	    </div>
+	</nav>
+  
+  
+<!-- end of header -->
+{% block content %}  
+{% endblock %}  
+<!-- footer content -->
+
+<footer class="ftco-footer ftco-section" style="background: #17181D">
+    <div class="container">
+      <div class="row mb-5">
+      <div class="col-md">
+        <div class="ftco-footer-widget mb-4" style="font-family:poppins">
+        <h2 class="ftco-heading-2 ftco-animate">Follow us on social media</h2>
+        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://twitter.com/marchdesigns" target="_blank"><span> <img src="/static/images/madtwit2.png"></img> </span></a></li>
+                <li class="ftco-animate"><a href="https://www.linkedin.com/company/mirabile-archdesigns" target="_blank"><span> <img src="/static/images/linked.png"></img> </span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/MirabileArchitects/?ref=br_rs" target="_blank"><span><img src="/static/images/madfb2.png"></img> </span></a></li>
+                <li class="ftco-animate"><a href="https://www.youtube.com/channel/UCnKW-xjadWsUhP6xvWbDQ2w" target="_blank"><span><img src="/static/images/youtube.png"></img> </span></a></li>
+          <li class="ftco-animate"><a href="https://www.instagram.com/mirabile_archdesigns/?hl=en" target="_blank"><span> <img src="/static/images/insta.png"></img> </span></a></li>
+        </ul>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="ftco-footer-widget mb-4 ml-md-5" style="font-family:poppins">
+        <h2 class="ftco-heading-2 ftco-animate">Our Services</h2>
+        <ul class="list-unstyled">
+          <li><a href="architecture.html" style="color:white" class="py-1 d-block ftco-animate"><span class="ion-ios-arrow-forward mr-3" style="color: white"></span>Architecture & Interior Design</a></li>
+          <li><a href="pre_design.html" style="color:white" class="py-1 d-block ftco-animate"><span class="ion-ios-arrow-forward mr-3" style="color: white"></span>Pre Design & Planning</a></li>
+          <li><a href="sus_design.html" style="color:white" class="py-1 d-block ftco-animate"><span class="ion-ios-arrow-forward mr-3" style="color: white"></span>Sustainable Design</a></li>
+          <li><a href="landscape_arch.html" style="color:white" class="py-1 d-block ftco-animate"><span class="ion-ios-arrow-forward mr-3"style="color: white" ></span>Landscape Architecture</a></li>
+  
+        </ul>
+        </div>
+      </div>
+      
+      <div class="col-md">
+        <div class="ftco-footer-widget mb-4" style="font-family:poppins">
+          <h2 class="ftco-heading-2 ftco-animate">Have a Question?</h2>
+          <div class="block-23 mb-3">
+          <ul>
+            <li><span class="icon icon-map-marker ftco-animate"></span><span class="text ftco-animate" style="color: white">P.O.Box: 14 - 00101. Juja, Kenya</span></li>
+            <li><span><img class="ftco-animate" src="/static/images/madphone.png"></img></span><span class="text ftco-animate" style="color:white"> +254 729 038 088</span></li>
+            <li><span><img class="ftco-animate" src="/static/images/madphone.png"></img></span><span class="text ftco-animate" style="color:white"> +254 738 920 749</span></li>
+            <li><span><img class="ftco-animate" src="/static/images/madphone.png"></img></span><span class="text ftco-animate" style="color:white"> +254 706 457 150</span></li>
+            <li><span><img class="ftco-animate" src="/static/images/madevn.png"></img></span>&nbsp;&nbsp;<span class="text ftco-animate" style="color:white"> info@architrevo.com</span></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-md-12 text-center">
+  
+        <p class="ftco-animate">
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </a>
+  </p>
+      </div>
+      </div>
+    </div>
+    </footer>
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("ftco-navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+if (window.pageYOffset >= sticky) {
+navbar.classList.add("sticky")
+} else {
+navbar.classList.remove("sticky");
+}
+}
+</script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/aos.js' %}"></script>
+<script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+<script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+<script src="{% static 'js/scrollax.min.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="{% static 'js/google-map.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

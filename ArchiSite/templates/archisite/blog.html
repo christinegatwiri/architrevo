@@ -1,0 +1,89 @@
+
+{% extends 'ArchiSite/base.html' %}
+{% block content %} 
+{% load static %}
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('/static/images/slideshow/back5.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">Our Blog</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Blog <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+   	
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+          	<span class="subheading">Our Blog</span>
+            <h2>Recent Blog</h2>
+          </div>
+        </div>
+        <div class="row d-flex">
+            <div class="col-md-4 d-flex ftco-animate">
+                <div class="blog-entry justify-content-end">
+                  {% for b in blog %}
+                  <span class="block-20" style="object-fit:cover;background-image: url('{{b.thumbnail.url}}');"></span>
+                 
+						<div class="text p-4 float-right d-block" style="font-family:poppins">
+						  <div class="topper d-flex align-items-center">
+							<div class="one py-2 pl-3 pr-1 align-self-stretch">
+								<span class="day" style="font-size:30px;font-family:poppins;color:black;">{{b.date|date:'d'}}</span>
+							</div>
+							
+								<div class="two pl-0 pr-3 py-2 align-self-stretch" >
+									<span class="yr" style="font-family:poppins;color:black;">{{b.date|date:'m'}}</span>
+									<span class="mos" style="font-family:poppins;color:black;">{{b.date|date:'Y'}}</span>
+								</div>
+						  </div>
+						  <h3 class="heading mt-2" style="font-family:poppins"><a target="_blank" href="">View Post</a></h3>
+						  <p style="font-family:poppins">{{b.post}}</p>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+        </div>
+        
+        <div class="row mt-5">
+          <div class="col text-center">
+            <div class="block-27">
+              <ul>
+                <li><a href="#">&lt;</a></li>
+                <li class="active"><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">&gt;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section-parallax bg-secondary">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-7 text-center heading-section heading-section-white ftco-animate" style="font-family: poppins;">
+              <h2 style="font-family: poppins;">Subcribe to our Newsletter</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+              <div class="row d-flex justify-content-center mt-4 mb-4">
+                <div class="col-md-8">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <input type="submit" value="Subscribe" class="submit px-3">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% endblock %}  
