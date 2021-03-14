@@ -13,13 +13,6 @@ class Portfolio(models.Model):
     area = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
 
-class HousePlans(models.Model):
-    title = models.CharField(max_length=200,default="null")
-    images = models.ImageField(upload_to = 'images/houseplans', default=None)
-    location = models.CharField(max_length=200)
-    area = models.CharField(max_length=200)
-    description = models.CharField(max_length=200)
-
 class Services(models.Model):
     service_pic = models.ImageField(upload_to = 'images/portfolio', default=None)
     service_name = models.CharField(max_length=200)

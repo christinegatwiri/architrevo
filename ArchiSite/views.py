@@ -4,7 +4,7 @@ from rest_framework import generics, views, viewsets
 from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .forms import HousePlansForm,PortfolioForm
+from .forms import PortfolioForm
 from ArchiSite.models import *
 from ArchiSite.serializers import *
 from ArchiSite.forms import *
@@ -55,21 +55,6 @@ def portfolio(request):
     port_list = Portfolio.objects.all()
     return render(request, 'archisite/portfolio.html',{'portfolio': port_list,'nbar':'portfolio', 'media_url':settings.MEDIA_URL})
 
-def house_plans(request):
-    plans_list = HousePlans.objects.all()
-    return render(request, 'archisite/house_plans.html',{'plans': plans_list,'nbar':'plans', 'media_url':settings.MEDIA_URL})
-
-def plans_upload(request):
-    if request.method == 'POST':
-        form = HousePlansForm(request.POST,request.FILES)
-        if form.is_valid():
-            plans = form.save(commit=False)
-            plans.save()
-            return redirect('house_plans')
-    else:
-        form = HousePlansForm()
-    return render(request,'archisite/upload_plan.html',{'form': form})
-
 def portfolio_upload(request):
     if request.method == 'POST':
         form = PortfolioForm(request.POST,request.FILES)
@@ -84,10 +69,6 @@ def portfolio_upload(request):
 class ListPortfolio(viewsets.ModelViewSet):
     queryset = Portfolio.objects.all()
     serializer_class = PortfolioSerializer
-
-class ListHousePlans(viewsets.ModelViewSet):
-    queryset = HousePlans.objects.all()
-    serializer_class = HousePlansSerializer
 
 class ListServices(viewsets.ModelViewSet):
     queryset = Services.objects.all()

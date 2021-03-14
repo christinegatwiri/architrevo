@@ -5,7 +5,6 @@ from django import forms
 from .models import *
 
 admin.site.register(Portfolio)
-admin.site.register(HousePlans)
 admin.site.register(NewsletterList)
 admin.site.register(Applications)
 admin.site.register(Blog)

@@ -1,10 +1,5 @@
 from django import forms
-from .models import HousePlans,Portfolio
-
-class HousePlansForm(forms.ModelForm):
-    class Meta:
-        model = HousePlans
-        fields = ('images','location','area','description')
+from .models import Portfolio
 
 class PortfolioForm(forms.ModelForm):
     class Meta:
