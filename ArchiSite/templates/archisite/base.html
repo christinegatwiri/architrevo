@@ -58,8 +58,13 @@
     .myimage
     {
       object-fit: cover;
-      filter: blur(1.5px);
+      filter: blur(1px);
+      background-color: #000;
       /* height:450px; */
+    }
+
+    .imageblur{
+      background-color: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
     }
 
     .servicediv.servicestxt
@@ -80,7 +85,7 @@
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
           <div class="container">
-            <img src="/static/images/architrevowebsitefiles/newlogo.png" style="height:120px;width:230px;display:flex;"></img> &nbsp;&nbsp;&nbsp;
+            <img src="/static/images/archilogos/header.png" onclick="location.href = '{% url 'index' %}';" style="height:80px;width:300px;display:flex;"></img> &nbsp;&nbsp;&nbsp;
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
           </button>
@@ -111,11 +116,11 @@
         <div class="ftco-footer-widget mb-4" style="font-family:poppins">
         <h2 class="ftco-heading-2 ftco-animate">Follow us on social media</h2>
         <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="https://twitter.com/marchdesigns" target="_blank"><span> <img src="/static/images/madtwit2.png"></img> </span></a></li>
-                <li class="ftco-animate"><a href="https://www.linkedin.com/company/mirabile-archdesigns" target="_blank"><span> <img src="/static/images/linked.png"></img> </span></a></li>
-                <li class="ftco-animate"><a href="https://www.facebook.com/MirabileArchitects/?ref=br_rs" target="_blank"><span><img src="/static/images/madfb2.png"></img> </span></a></li>
+                <li class="ftco-animate"><a href="https://twitter.com/architrevo" target="_blank"><span> <img src="/static/images/madtwit2.png"></img> </span></a></li>
+                <li class="ftco-animate"><a href="https://www.linkedin.com/company/architrevo/" target="_blank"><span> <img src="/static/images/linked.png"></img> </span></a></li>
+                <li class="ftco-animate"><a href="https://web.facebook.com/Architrevo" target="_blank"><span><img src="/static/images/madfb2.png"></img> </span></a></li>
                 <li class="ftco-animate"><a href="https://www.youtube.com/channel/UCnKW-xjadWsUhP6xvWbDQ2w" target="_blank"><span><img src="/static/images/youtube.png"></img> </span></a></li>
-          <li class="ftco-animate"><a href="https://www.instagram.com/mirabile_archdesigns/?hl=en" target="_blank"><span> <img src="/static/images/insta.png"></img> </span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/architrevo/" target="_blank"><span> <img src="/static/images/insta.png"></img> </span></a></li>
         </ul>
         </div>
       </div>
@@ -123,10 +128,10 @@
         <div class="ftco-footer-widget mb-4 ml-md-5" style="font-family:poppins">
         <h2 class="ftco-heading-2 ftco-animate">Our Services</h2>
         <ul class="list-unstyled">
-          <li><a href="architecture.html" style="color:white" class="py-1 d-block ftco-animate"><span class="ion-ios-arrow-forward mr-3" style="color: white"></span>Architecture & Interior Design</a></li>
-          <li><a href="pre_design.html" style="color:white" class="py-1 d-block ftco-animate"><span class="ion-ios-arrow-forward mr-3" style="color: white"></span>Pre Design & Planning</a></li>
-          <li><a href="sus_design.html" style="color:white" class="py-1 d-block ftco-animate"><span class="ion-ios-arrow-forward mr-3" style="color: white"></span>Sustainable Design</a></li>
-          <li><a href="landscape_arch.html" style="color:white" class="py-1 d-block ftco-animate"><span class="ion-ios-arrow-forward mr-3"style="color: white" ></span>Landscape Architecture</a></li>
+          <li><a href="{% url 'architecture' %}" style="color:white" class="py-1 d-block ftco-animate"><span class="ion-ios-arrow-forward mr-3" style="color: white"></span>Architecture & Interior Design</a></li>
+          <li><a href="{% url 'predesign' %}" style="color:white" class="py-1 d-block ftco-animate"><span class="ion-ios-arrow-forward mr-3" style="color: white"></span>Pre Design & Planning</a></li>
+          <li><a href="{% url 'susdesign' %}" style="color:white" class="py-1 d-block ftco-animate"><span class="ion-ios-arrow-forward mr-3" style="color: white"></span>Sustainable Design</a></li>
+          <li><a href="{% url 'landscape' %}" style="color:white" class="py-1 d-block ftco-animate"><span class="ion-ios-arrow-forward mr-3"style="color: white" ></span>Landscape Architecture</a></li>
   
         </ul>
         </div>
